@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui"
+>
+
+<composite:interface>
+    <composite:attribute name="model" required="true" type="org.primefaces.test.Model"/>
+</composite:interface>
+
+<composite:implementation>
+
+    <p:panel header="Panel header" toggleable="true" toggleableHeader="true"
+             collapsed="#{controller.configurationExists(cc.attrs.model)}">
+        <h:outputText value="Panel content"/>
+    </p:panel>
+
+</composite:implementation>
+
+</html>
